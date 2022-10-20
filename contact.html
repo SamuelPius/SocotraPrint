@@ -65,7 +65,7 @@
                     <h2>Contact us</h2>
                 </div>
 
-            <form id="contact-form" class="contact__form mt-5" method="post" action="mail.php">
+            <form id="contact-form" class="contact__form mt-5" onsubmit="sendEmail(); reset(); return false;">
              <!-- form message -->
                 <div class="row">
                     <div class="col-12">
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- end message -->
+             <!-- end message -->
                 <div class="form-row">
                     <div class="col-lg-6">
                         <div class="form-group mb-3">
@@ -83,7 +83,12 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group mb-3">
-                            <input name="name" type="text" class="form-control" placeholder="Your Subject">
+                            <input name="number" type="number" class="form-control" placeholder="Your Contact Number">
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group mb-3">
+                            <input name="subject" type="text" class="form-control" placeholder="Your Subject">
                         </div>
                     </div>
 
@@ -140,6 +145,20 @@
     </div>
   </section>
 
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6351bca9b0d6371309caa5cd/1gfrkhu2e';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
 <!-- Footer start -->
 <section class="footer">
 	<div class="container">
@@ -179,8 +198,11 @@
 
  <!-- Google Map -->
 <script src="plugins/google-map/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script> 
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2XMK-Te2HumbYHylSXxspSqegV3TqLN4&callback=initMap"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXK3AKPuC7LSRr1z_Qs3L7GWKN2W9pQbg&callback=initMap"  async="" defer="defer" type="text/javascript"></script>
+></script>
 <!-- Main Script -->
 <script src="js/script.js"></script>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="js/mail-send.js"></script>
 </html>
